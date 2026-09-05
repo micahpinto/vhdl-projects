@@ -8,9 +8,7 @@ This project implements a **4-digit multiplexed display system** on an FPGA. Ins
 
 A 4-digit number (e.g., **1234**) on four 7-segment displays, with optional decimal points on each digit.
 
-## Note
-
-Instead of displaying all four digits simultaneously, the system rapidly cycles through each display:
+Note-Instead of displaying all four digits simultaneously, the system rapidly cycles through each display:
 ```
 Time 0-1ms: Display 0 ON (shows digit 0)
 Time 1-2ms: Display 1 ON (shows digit 1)
@@ -18,8 +16,6 @@ Time 2-3ms: Display 2 ON (shows digit 2)
 Time 3-4ms: Display 3 ON (shows digit 3)
 Time 4-5ms: Display 0 ON (repeat cycle)
 ```
-
-
 This cycles 1000 times per second (1 kHz), so one's eyes blend the 4 images together and see "1234" on all 4 displays at the same time.
 
 ## Why Multiplexing?
